@@ -7,11 +7,6 @@ import {login} from '../apis/user';
 
 
 export function userLogin(data) {
-  // return {
-  //   type: USER_LOGIN,
-  //   data
-  // };
-
   return (dispatch, getState) => {
     return login(data).then(
       resp => dispatch(_loadUserInfo(resp)),

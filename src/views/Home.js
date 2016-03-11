@@ -18,11 +18,8 @@ class Home extends React.Component {
     this.setState({ current: e.key });
 
     this.props.dispatch(UserActions.userLogin({
-      username: 'zhining',
-      password: '123'
+      username: 'zhining'
     }));
-
-    console.log(this.props);
   }
 
   render() {
