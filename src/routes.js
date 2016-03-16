@@ -3,14 +3,13 @@ import {
   Router, Route, browserHistory,
   IndexRoute
 } from 'react-router';
-import App from './App';
-import {
-  Home
-} from './views/';
+
+import Root from './views/Root';
+import Home from './views/Home';
 
 module.exports = (
   <Router history={browserHistory}>
-    <Route path="/" component={App}>
+    <Route path="/" component={Root}>
       <IndexRoute component={Home}></IndexRoute>
       <Route path="*" component={Home}></Route>
     </Route>

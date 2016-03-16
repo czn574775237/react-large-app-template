@@ -2,7 +2,12 @@
 thanks for [react-transform-template](https://github.com/gaearon/react-transform-boilerplate)
 
 ### Feature
-* react + reduxe + react-router
+* react + redux + react-router
 * webpack hot replace
-* .less support
+* .less style support
 
+
+
+### todo list
+* add redux-devtools
+* thinking of adding redux-action?(too more action types)
