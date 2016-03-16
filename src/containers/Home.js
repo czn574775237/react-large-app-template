@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import * as UserActions from '../actions/user';
+import {Link} from 'react-router';
 
 
 class Home extends React.Component {
@@ -33,6 +34,7 @@ class Home extends React.Component {
           <h3>{user.username}</h3> :
           null
         }
+        <Link to={'/user'}>User</Link>
       </div>
     );
   }
