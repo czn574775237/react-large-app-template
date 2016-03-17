@@ -1,7 +1,7 @@
 import React from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import * as UserActions from '../actions/user';
-import {Link} from 'react-router';
+import { Link } from 'react-router';
 
 
 class HomeView extends React.Component {
@@ -12,10 +12,11 @@ class HomeView extends React.Component {
       current: 'mail'
     };
 
-    this.handleClick = this.handleClick.bind(this);
+    this._handleClick = this._handleClick.bind(this);
+    this._handleClickUserInfo = this._handleClickUserInfo.bind(this);
   }
 
-  handleClick(e) {
+  _handleClick(e) {
     this.setState({ current: e.key });
 
     this.props.dispatch(UserActions.userLogin({
@@ -23,17 +24,22 @@ class HomeView extends React.Component {
     }));
   }
 
+  _handleClickUserInfo() {
+    this.props.dispatch(UserActions.getUserInfo());
+  }
+
   render() {
     let { user } = this.props;
     return (
       <div>
         <h1>HomeView</h1>
-        <h2 onClick={this.handleClick}>Click to login (1s to show, mock.)</h2>
+        <h2 onClick={this._handleClick}>Click to login (1s to show, mock.)</h2>
         {
           user ?
           <h3>{user.username}</h3> :
           null
         }
+        <h3 onClick={this._handleClickUserInfo}>Get user info event.</h3>
         <Link to={'/user'}>User</Link>
       </div>
     );

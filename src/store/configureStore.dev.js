@@ -6,7 +6,8 @@ import Devtools from '../containers/Devtools';
 
 export default function configureStore(initialState = {}) {
   let middleware = applyMiddleware(
-    thunk
+    thunk,
+    createLogger()
   );
 
   if (__DEV__) {

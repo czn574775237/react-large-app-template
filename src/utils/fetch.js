@@ -1,7 +1,7 @@
 import fetch from 'isomorphic-fetch';
 
 export default function _fetch(url, config) {
-  url = `${http.API_ROOT}${url}`;
+  url = `${_fetch.API_ROOT}${url}`;
 
   return fetch(url, config)
     .then(_status)
