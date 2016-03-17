@@ -4,7 +4,7 @@ import * as UserActions from '../actions/user';
 import {Link} from 'react-router';
 
 
-class Home extends React.Component {
+class HomeView extends React.Component {
 
   constructor(props) {
     super(props);
@@ -27,7 +27,7 @@ class Home extends React.Component {
     let { user } = this.props;
     return (
       <div>
-        <h1>Home</h1>
+        <h1>HomeView</h1>
         <h2 onClick={this.handleClick}>Click to login (1s to show, mock.)</h2>
         {
           user ?
@@ -46,4 +46,4 @@ function mapStateToProps(state) {
 }
 
 // wrapper set props to the Component
-export default connect(mapStateToProps)(Home);
+export default connect(mapStateToProps)(HomeView);

@@ -5,7 +5,9 @@ import user from './user';
 
 const app = combineReducers({
   user,
-  // routing: routerReducer
+
+  // bind react-router state to this
+  routing: routerReducer
 });
 
 export default app;

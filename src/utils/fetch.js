@@ -1,6 +1,6 @@
-import fetch from 'whatwg-fetch';
+import fetch from 'isomorphic-fetch';
 
-export function http(url, config) {
+export default function _fetch(url, config) {
   url = `${http.API_ROOT}${url}`;
 
   return fetch(url, config)
@@ -8,7 +8,7 @@ export function http(url, config) {
     .then(_json);
 }
 
-http.API_ROOT = '';
+_fetch.API_ROOT = '';
 
 
 function _status(response) {

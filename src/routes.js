@@ -7,18 +7,17 @@ import store from './store/index';
 import { syncHistoryWithStore } from 'react-router-redux';
 
 import Root from './containers/Root';
-import Home from './containers/Home';
-import User from './containers/User';
+import HomeView from './views/HomeView';
+import UserView from './views/UserView';
 
-// let history = syncHistoryWithStore(browserHistory, store);
-let history = browserHistory;
+let history = syncHistoryWithStore(browserHistory, store);
 
 module.exports = (
   <Router history={history}>
     <Route path="/" component={Root}>
-      <IndexRoute component={Home} />
-      <Route path="/user" component={User} />
-      <Route path="*" component={Home} />
+      <IndexRoute component={HomeView} />
+      <Route path="/user" component={UserView} />
+      <Route path="*" component={HomeView} />
     </Route>
   </Router>
 );
