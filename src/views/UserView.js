@@ -6,7 +6,7 @@ class UserView extends React.Component {
   render() {
     return (
       <div>
-        <h2>HEO</h2>
+        <h1>User View</h1>
       </div>
     );
   }

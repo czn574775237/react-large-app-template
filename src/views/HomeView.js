@@ -32,7 +32,7 @@ class HomeView extends React.Component {
     let { user } = this.props;
     return (
       <div>
-        <h1>HomeView</h1>
+        <h1 style={styles.h1}>HomeView</h1>
         <h2 onClick={this._handleClick}>Click to login (1s to show, mock.)</h2>
         {
           user ?
@@ -40,12 +40,20 @@ class HomeView extends React.Component {
           null
         }
         <h3 onClick={this._handleClickUserInfo}>Get user info event.</h3>
-        <Link to={'/user'}>User</Link>
+        <p><Link to={'/user'}>User</Link></p>
+        <p><Link to={'/user'}>Form</Link></p>
       </div>
     );
   }
 }
 
+const styles = {
+  h1: {
+    color: '#08c',
+    padding: '2em',
+    border: '1px solid #ccc'
+  }
+}
 
 function mapStateToProps(state) {
   return {user: state.user};
