@@ -1,11 +1,13 @@
 import React from 'react';
 
-export default class Root extends React.Component {
+class AppView extends React.Component {
   render() {
     return (
-      <div className="root-wrapper">
+      <div className="app-view">
         {this.props.children}
       </div>
-    );
+    )
   }
 }
+
+export default AppView

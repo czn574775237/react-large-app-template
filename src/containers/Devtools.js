@@ -6,7 +6,8 @@ import Inspector from 'redux-devtools-inspector';
 
 export default createDevTools(
   <DockMonitor toggleVisibilityKey='ctrl-h'
-               changePositionKey='ctrl-q'>
+               changePositionKey='ctrl-q'
+               defaultIsVisible={false}>
     <LogMonitor />
   </DockMonitor>
 );
